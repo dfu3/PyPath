@@ -67,22 +67,13 @@ class Node:
     def calc_G(self, parentG): # calculates dist traveled
 
         if(self.isDiag):
-            self.g = parentG + 14 #was 10
+            self.g = parentG + 14
         else:
             self.g = parentG + 10
 
     def calc_H(self, tarPos): # calculates the Heuristic cost to goal
 
-        yDist = abs(self.pos[0] - tarPos[0])
-        xDist = abs(self.pos[1] - tarPos[1])
-
-        if (xDist < yDist):
-            H = (14 * xDist) + (10 * abs(xDist - yDist))
-        else:
-            H = (14 * yDist) + (10 * abs(yDist - xDist))
-
         H = 14*(abs(self.pos[1] - tarPos[1]) + abs(self.pos[0] - tarPos[0]))
-
         self.h = H
 
     def calc_F(self):
@@ -277,8 +268,8 @@ def main():
                                 if(i.g > j.g):
                                     add = False
                                 else:
-                                    j.parent = i #i.parent = j
-                                    i.g = j.g    #j.g = i.g
+                                    j.parent = i
+                                    i.g = j.g
                                     j.calc_G(curNode.g)
                                     j.calc_H(tarNode.pos)
                                     j.calc_F()
@@ -297,7 +288,6 @@ def main():
 
                         map.drawMatrix()
                         #ch = sys.stdin.read(1)
-                        #time.sleep(.0333)
                         time.sleep(.1)
                         os.system('clear')
 
@@ -310,7 +300,6 @@ def main():
                 #-----------------------------
                 map.drawMatrix()
                 #ch = sys.stdin.read(1)
-                #time.sleep(.0666)
                 time.sleep(.3)
                 os.system('clear')
                 ch = '?'
