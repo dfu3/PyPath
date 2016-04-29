@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a6bf4df-3ba6-4864-a09d-81a61383c8ce" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MapGen.py" afterPath="$PROJECT_DIR$/MapGen.py" />
-    </list>
+    <list default="true" id="5a6bf4df-3ba6-4864-a09d-81a61383c8ce" name="Default" comment="" />
     <ignored path="AI_Test.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
